@@ -1,0 +1,176 @@
+{% extends 'index.html' %}
+
+{% block title %}Registration Form{% endblock %}
+
+
+{% block content %}
+<form method="POST" class="form-sample" name ="myForm">
+	{% csrf_token %}
+    <div class="personal-details-wrapper">
+        <div class="bio-fields-wrapper">
+            <label class="bio-label">Full Name</label>
+            <div class="div-block-268">
+                {{form.name}}
+            </div>
+        </div>
+        <!--div class="bio-fields-wrapper">
+            <label class="bio-label">Date of Birth</label>
+            <div class="div-block-268">
+                {{form.dob}}
+            </div>
+        </div>
+        <div class="bio-fields-wrapper">
+            <label class="bio-label">Time of Birth</label>
+            <div class="div-block-268">
+                {{form.timeofBirth}}
+            </div>
+        </div>
+        <div class="bio-fields-wrapper">
+            <label class="bio-label">Place of Birth</label>
+            <div class="div-block-268">
+                {{form.place_of_birth}}
+            </div>
+        </div>
+        <div class="bio-fields-wrapper">
+            <label class="bio-label">Place of Birth</label>
+            <div class="div-block-268">
+                {{form.sub_place}}
+            </div>
+        </div>
+        <div class="bio-fields-wrapper">
+            <label class="bio-label">Rashi</label>
+            <div class="div-block-268">
+                {{form.rashi}}
+            </div>
+
+        </div>
+        <div class="bio-fields-wrapper">
+            <label class="bio-label">Nakshatra</label>
+            <div class="div-block-268">
+                {{form.nakshatra}}
+            </div>
+        </div>
+        <div class="bio-fields-wrapper">
+            <label class="bio-label">Height</label>
+            <div class="div-block-268">
+                {{form.height}}
+            </div>
+        </div>
+        <div class="bio-fields-wrapper">
+            <label class="bio-label">Religion</label>
+            <div class="div-block-268">
+                {{form.religion}}
+            </div>
+        </div>
+        <div class="bio-fields-wrapper">
+            <label class="bio-label">Caste</label>
+            <div class="div-block-268">
+                {{form.caste}}
+            </div>
+        </div>
+        <div class="bio-fields-wrapper">
+            <label class="bio-label">Sub-caste</label>
+            <div class="div-block-268">
+                {{form.sub_caste}}
+            </div>
+        </div>
+        <div class="bio-fields-wrapper">
+            <label class="bio-label">Gotra</label>
+            <div class="div-block-268">
+                {{form.gotra}}
+            </div>
+        </div>
+        <div class="bio-fields-wrapper">
+            <label class="bio-label">Manglik</label>
+            <div class="div-block-268">
+                {{form.manglik}}
+            </div>
+        </div>
+        <div class="bio-fields-wrapper">
+            <label class="bio-label">Education</label>
+            <div class="div-block-268">
+                {{form.education}}
+            </div>
+        </div>
+        <div class="bio-fields-wrapper">
+            <label class="bio-label">College Name</label>
+            <div class="div-block-268">
+                {{form.college_name}}
+            </div>
+        </div>
+        <div class="bio-fields-wrapper">
+            <label class="bio-label">Employed in</label>
+            <div class="div-block-268">
+                {{form.employee}}
+            </div>
+        </div>
+        <div class="bio-fields-wrapper">
+            <label class="bio-label">Organization Name</label>
+            <div class="div-block-268">
+                {{form.org_name}}
+            </div>
+        </div>
+        <div class="bio-fields-wrapper">
+            <label class="bio-label">Annual Income</label>
+            <div class="div-block-268">
+                {{form.income}}
+            </div>
+        </div>
+        <div class="bio-fields-wrapper">
+            <label class="bio-label">Father's name</label>
+            <div class="div-block-268">
+                {{form.fname}}
+            </div>
+        </div>
+        <div class="bio-fields-wrapper">
+            <label class="bio-label">Father's occupation</label>
+            <div class="div-block-268">
+                {{form.foccupation}}
+            </div>
+        </div>
+        <div class="bio-fields-wrapper">
+            <label class="bio-label">Mother's name</label>
+            <div class="div-block-268">
+            {{form.mname}}
+        </div>
+        </div>
+        <div class="bio-fields-wrapper">
+            <label class="bio-label">Mother's occupation</label>
+            <div class="div-block-268">
+                {{form.moccupation}}
+            </div>
+        </div>
+        <div class="bio-fields-wrapper">
+            <label class="bio-label">Total brothers</label>
+            <div class="div-block-268">
+                {{form.brothers}}
+            </div>
+        </div>
+        <div class="bio-fields-wrapper">
+            <label class="bio-label">Total sisters</label>
+            <div class="div-block-268">
+                {{form.sisters}}
+            </div>
+        </div>
+        <div class="bio-fields-wrapper">
+            <label class="bio-label">Married brothers</label>
+            <div class="div-block-268">
+                {{form.mbrothers}}
+            </div>
+        </div>
+        <div class="bio-fields-wrapper">
+            <label class="bio-label">Married sisters</label>
+            <div class="div-block-268">
+                {{form.msisters}}
+            </div>
+        </div-->
+    </div>
+    <input class="btn btn-primary btn-rounded btn-fw" id="submit" type = "submit"  value="Save">
+</form>
+<script>
+function GEEKFORGEEKS() {
+		return true;
+	}
+
+</script>
+{% endblock %}

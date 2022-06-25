@@ -17,12 +17,13 @@
 
   </head>
 <body>
+{% block title %}{% endblock %}
 <section id="header" class="cd-secondary-nav">
   <nav class="navbar navbar-default" role="navigation">
  <div class="container">
    <div class="row">
       <div class="col-sm-12 space_all">
-		  <div class="col-sm-4 space_all">	
+		  <div class="col-sm-4 space_all">
 		   <div class="navbar-header">
 			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#dropdown-thumbnail-preview">
 				<span class="sr-only">Toggle navigation</span>
@@ -32,11 +33,11 @@
 			  </button>
 			  <div class="header_2">
 			   <h2><a class="navbar-brand" href="index.html"><i class="fa fa-users"></i>Matrimonials</a></h2>
-			</div> 
-         </div>             	  		  
+			</div>
+         </div>
 		  </div>
-		  <div class="col-sm-8 space_all">		     
-			  <div class="col-sm-12 space_all">	
+		  <div class="col-sm-8 space_all">
+			  <div class="col-sm-12 space_all">
                <div class="header_5 clearfix">
 			  <div class="col-sm-5">
 			    <div class="header_3">
@@ -52,8 +53,8 @@
 			   <div class="header_4">
 			    <p><a href="#">Log In</a></p>
 			   </div>
-			  </div>	            		  
-			 </div>	
+			  </div>
+			 </div>
              <div class="col-sm-12 space_all">
 			  <div class="header_6">
 			   <div class="col-sm-5 space_all">
@@ -66,9 +67,9 @@
 				 <div class="col-sm-11 space_all">
 				  <div class="header_7">
 				 <a href="#"><span class="well_2">Keep me logged in</span></a>
-				</div>	
+				</div>
 				 </div>
-				</div>			    		   
+				</div>
 			  </div>
 			  <div class="col-sm-7">
 			   <div class="header_8">
@@ -78,9 +79,9 @@
 					 <li><a href="#">Login Via OTP</a></li>
 				</ul>
 			   </div>
-			  </div>			 
-			  </div>			  
-			 </div>			 
+			  </div>
+			  </div>
+			 </div>
 			<div class="col-sm-12 space_all">
 					  <div class="collapse navbar-collapse" id="dropdown-thumbnail-preview">
 					  <ul class="nav navbar-nav">
@@ -94,20 +95,21 @@
 						  <ul class="dropdown-menu">
 							 <li><a href="Listing.html" class="hvr-wobble-to-top-right">LISTING</a></li>
 							 <li><a href="details.html" class="hvr-wobble-to-top-right">DETAILS</a></li>
-							 <li><a href="contact.html" class="hvr-wobble-to-top-right">CONTACT</a></li>			 
+							 <li><a href="contact.html" class="hvr-wobble-to-top-right">CONTACT</a></li>
 						  </ul>
 						</li>
 					  </ul>
 				</div>
-			</div>		     
+			</div>
 		  </div>
 	   </div>
      </div>
     </div>
    </div>
   </nav>
- </section>  
-<section id="center" class="clearfix">
+ </section>
+{% block content %}{% endblock %}
+<!--section id="center" class="clearfix">
    <div class="col-sm-12 space_all">
     <div class="col-sm-6"></div>
     <div class="col-sm-6">
@@ -291,8 +293,8 @@
 	</div>
    </div>
   </div>
-   </div>
-   <div class="col-sm-12 space_all">
+   </div-->
+   <!--div class="col-sm-12 space_all">
     <div class="center_9 clearfix">
 	 <div class="col-sm-4">
 	 <div class="col-sm-12">
@@ -337,9 +339,9 @@
 	 </div>	 
 	 </div>
 	</div>	
-   </div>
+   </div-->
 </section>
-<section id="middle">
+<!--section id="middle">
  <div class="container">
   <div class="row">
    <div class="col-sm-12">
@@ -1065,4 +1067,4 @@ $(document).ready(function(){
 });
 	</script>
 	
-</html>
+</html-->
