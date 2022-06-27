@@ -1,10 +1,8 @@
 {% extends 'index.html' %}
 
-{% block title %}Registration Form{% endblock %}
-
 
 {% block content %}
-<form method="POST" class="form-sample" name ="myForm">
+<!--form-- method="POST" class="form-sample" name ="myForm">
 	{% csrf_token %}
     <div class="personal-details-wrapper">
         <div class="bio-fields-wrapper">
@@ -13,7 +11,7 @@
                 {{form.name}}
             </div>
         </div>
-        <!--div class="bio-fields-wrapper">
+        <div class="bio-fields-wrapper">
             <label class="bio-label">Date of Birth</label>
             <div class="div-block-268">
                 {{form.dob}}
@@ -163,14 +161,575 @@
             <div class="div-block-268">
                 {{form.msisters}}
             </div>
-        </div-->
+        </div>
     </div>
     <input class="btn btn-primary btn-rounded btn-fw" id="submit" type = "submit"  value="Save">
-</form>
-<script>
-function GEEKFORGEEKS() {
-		return true;
-	}
+</form-->
 
-</script>
+   <div class="col-sm-24 space_all">
+    <div class="col-sm-12">
+      <div class="register_right">
+        <form class="center_2" method="POST" class="form-sample" name ="myForm">
+			{% csrf_token %}
+          <div class="register_right_inner clearfix">
+			 <div class="center_3">
+			  	<h2 class="text-center">Your partner search begins with a</br>
+									  FREE REGISTRATION!</h2>
+			 </div>
+			  <div class="clearfix clear_1" name = "name" id = "name">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_3" >
+						<label class="bio-label">Full Name</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.name}}
+				</div>
+			  </div>
+			  <div class="clearfix clear_1" name = "contact" id = "contact">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_4">
+						<label class="bio-label">Contact</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.contact}}
+				</div>
+			  </div>
+			  <div class="clearfix clear_1" name = "email" id = "email">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_4">
+						<label class="bio-label">Email</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.email}}
+				</div>
+			  </div>
+			  <div class="clearfix clear_1" name = "place_of_birth" id = "place_of_birth">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_4">
+						<label class="bio-label">Place of Birth</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.place_of_birth}}
+				</div>
+			  </div>
+			  <div class="clearfix clear_1" name = "sub_place" id = "sub_place">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_4">
+						<label class="bio-label">Sub Place</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.sub_place}}
+				</div>
+			  </div>
+			  <div class="clearfix clear_1" name = "dob" id = "dob">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_4">
+						<label class="bio-label">Date Of Birth</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.dob}}
+				</div>
+			  </div>
+
+				<input class="btn btn-primary btn-rounded btn-fw" id="submit" type = "submit"  value="save">
+
+			  <!--div class="clearfix clear_1" name = "timeofBirth" id = "timeofBirth">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_4">
+						<label class="bio-label">Time Of Birth</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.timeofBirth}}
+				</div>
+			  </div>
+			  <div class="clearfix clear_1" name = "caste" id = "caste">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_4">
+						<label class="bio-label">Caste</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.caste}}
+				</div>
+			  </div>
+			  <div class="clearfix clear_1" name = "sub_caste" id = "sub_caste">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_4">
+						<label class="bio-label">Sub Caste</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.sub_caste}}
+				</div>
+			  </div>
+			  <div class="clearfix clear_1" name = "gotra" id = "gotra">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_4">
+						<label class="bio-label">Gotra</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.gotra}}
+				</div>
+			  </div>
+			  <div class="clearfix clear_1" name = "manglik" id = "manglik">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_4">
+						<label class="bio-label">Manglik</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.manglik}}
+				</div>
+			  </div>
+			  <div class="clearfix clear_1" name = "rashi" id = "rashi">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_4">
+						<label class="bio-label">Rashi</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.rashi}}
+				</div>
+			  </div>
+			  <div class="clearfix clear_1" name = "nakshatra" id = "nakshatra">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_4">
+						<label class="bio-label">Nakshatra</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.nakshatra}}
+				</div>
+			  </div>
+			  <div class="clearfix clear_1" name = "height" id = "height">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_4">
+						<label class="bio-label">Height</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.height}}
+				</div>
+			  </div>
+			  <div class="clearfix clear_1" name = "religion" id = "religion">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_4">
+						<label class="bio-label">Religion</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.religion}}
+				</div>
+			  </div>
+			  <div class="clearfix clear_1" name = "education" id = "education">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_4">
+						<label class="bio-label">Education</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.education}}
+				</div>
+			  </div>
+			  <div class="clearfix clear_1" name = "employee" id = "employee">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_4">
+						<label class="bio-label">Employee</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.employee}}
+				</div>
+			  </div>
+			  <div class="clearfix clear_1" name = "income" id = "income">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_4">
+						<label class="bio-label">Income</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.income}}
+				</div>
+			  </div>
+			  <div class="clearfix clear_1" name = "college_name" id = "college_name">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_4">
+						<label class="bio-label">College Name</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.college_name}}
+				</div>
+			  </div>
+			  <div class="clearfix clear_1" name = "org_name" id = "org_name">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_4">
+						<label class="bio-label">Organization Name</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.org_name}}
+				</div>
+			  </div>
+			  <div class="clearfix clear_1" name = "fname" id = "fname">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_4">
+						<label class="bio-label">Father Name</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.fname}}
+				</div>
+			  </div>
+			  <div class="clearfix clear_1" name = "mname" id = "mname">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_4">
+						<label class="bio-label">Mother Name</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.mname}}
+				</div>
+			  </div>
+			  <div class="clearfix clear_1" name = "foccupation" id = "foccupation">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_4">
+						<label class="bio-label">Father Occupation</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.foccupation}}
+				</div>
+			  </div>
+			  <div class="clearfix clear_1" name = "moccupation" id = "moccupation">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_4">
+						<label class="bio-label">Mother Occupation</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.moccupation}}
+				</div>
+			  </div>
+			  <div class="clearfix clear_1" name = "brothers" id = "brothers">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_4">
+						<label class="bio-label">Brothers</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.brothers}}
+				</div>
+			  </div>
+			  <div class="clearfix clear_1" name = "sisters" id = "sisters">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_4">
+						<label class="bio-label">Sisters</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.sisters}}
+				</div>
+			  </div>
+			  <div class="clearfix clear_1" name = "mbrothers" id = "mbrothers">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_4">
+						<label class="bio-label">Married Brothers</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.mbrothers}}
+				</div>
+			  </div>
+			  <div class="clearfix clear_1" name = "msisters" id = "msisters">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_4">
+						<label class="bio-label"> Married Sisters</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.msisters}}
+				</div>
+			  </div>
+			  <div class="clearfix clear_1" name = "address" id = "address">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_4">
+						<label class="bio-label">Address</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.address}}
+				</div>
+			  </div>
+			  <div class="clearfix clear_1" name = "paddress" id = "paddress">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_4">
+						<label class="bio-label">Permenent Address</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.paddress}}
+				</div>
+			  </div>
+
+
+			  <div class="clearfix clear_1">
+				<div class="col-sm-4 register_right_inner_1">
+					<div class="center_4">
+						<label class="bio-label">Full Name</label>
+					</div>
+				</div>
+				<div class="col-sm-8 register_right_inner_1">
+				   {{form.name}}
+				</div>
+			  </div-->
+
+		  <!--div class="clearfix col-sm-12 clear_2 space_all">
+		   <div class="col-sm-5 space_all">
+			<div class="col-sm-12 space_all">
+			 <div class="col-sm-1 space_all">
+			  <div class="center_6">
+			   <h4><a href="#"><input type="checkbox"></a></h4>
+			  </div>
+
+			 </div>
+			  <div class="col-sm-11 space_all">
+			    <div class="center_5">
+				 <a href="#"><span class="well_5">I have read and agree to the T&C and Privacy Policy</span></a>
+				</div>
+			 </div>
+			</div>
+		   </div>
+
+		 </div-->
+		</div>
+
+
+
+        </form>
+      </div>
+    </div>
+   </div>
+	<!--div class="register_right_inner clearfix">
+	 <div class="center_3">
+	  <h2 class="text-center">Your partner search begins with a</br>
+                              FREE REGISTRATION!</h2>
+	 </div>
+	  <div class="clearfix clear_1">
+	    <div class="col-sm-4 register_right_inner_1 space_left">
+		<div class="center_4">
+		<p> Profile for<p>
+		</div>
+	   </div>
+	    <div class="col-sm-8 register_right_inner_1 space_left">
+	   <select class="input-text">
+	<option value="Religion">Select Matrimony Profile for</option>
+	<option value="Hindu">Hindu</option>
+	<option value="Muslim - Shia">Muslim - Shia</option>
+	<option value="Muslim - Sunni">Muslim - Sunni</option>
+	<option value="Muslim - Others">Muslim - Others</option>
+	<option value="Christian">Christian</option>
+	<option value="Sikh">Sikh</option>
+	<option value="Jain - Digambar">Jain - Digambar</option>
+	<option value="Jain - Shwetambar">Jain - Shwetambar</option>
+	<option value="Jain - Others">Jain - Others</option>
+	<option value="Parsi">Parsi</option>
+	<option value="Buddhist">Buddhist</option>
+	<option value="Inter-Religion">Inter-Religion</option>
+   </select>
+	 </div>
+	 </div>
+	  <div class="clearfix clear_1">
+	    <div class="col-sm-4 register_right_inner_1 space_left">
+		<div class="center_4">
+		<p> Name<p>
+		</div>
+	   </div>
+	    <div class="col-sm-8 register_right_inner_1 space_left">
+	   <input type="text" class="input-text" placeholder="">
+	 </div>
+	 </div>
+	  <div class="clearfix clear_1">
+	    <div class="col-sm-4 register_right_inner_1 space_left">
+		<div class="center_4">
+		<p>Date of birth<p>
+		</div>
+	 </div>
+	    <div class="col-sm-8 register_right_inner_1 space_left">
+	   <select class="span3" name="expiry_month" id="expiry_month">
+               <option>DD</option>
+                <option value="01">DD</option>
+                <option value="02">03</option>
+                <option value="03">04</option>
+                <option value="04">05</option>
+                <option value="05">06</option>
+                <option value="06">07</option>
+                <option value="07">08</option>
+                <option value="08">09</option>
+                <option value="09">10</option>
+              </select>
+			  <select class="span3" name="expiry_month" id="expiry_month">
+               <option>MM</option>
+                <option value="01">MM</option>
+                <option value="02">JAN</option>
+                <option value="03">FEB</option>
+                <option value="04">MAR</option>
+                <option value="05">APR</option>
+                <option value="06">MAY</option>
+                <option value="07">JUN</option>
+                <option value="08">JULY</option>
+                <option value="09">AUG</option>
+				<option value="09">SEP</option>
+				<option value="09">OCT</option>
+				<option value="09">NOV</option>
+				<option value="09">DEC</option>
+              </select>
+			  <select class="span3" name="expiry_month" id="expiry_month">
+               <option>YEAR</option>
+                <option value="01">YEAR</option>
+                <option value="02">2000</option>
+                <option value="03">1999</option>
+                <option value="04">1998</option>
+                <option value="05">1997</option>
+                <option value="06">1996</option>
+                <option value="07">1995</option>
+                <option value="08">1994</option>
+                <option value="09">1993</option>
+              </select>
+	 </div>
+	 </div>
+	  <div class="clearfix clear_1">
+	    <div class="col-sm-4 register_right_inner_1 space_left">
+		<div class="center_4">
+		<p>Religion<p>
+		</div>
+	    </div>
+	    <div class="col-sm-6 register_right_inner_1 space_left">
+	   <select class="input-text">
+	<option value="Religion">Religion</option>
+	<option value="Hindu">Hindu</option>
+	<option value="Muslim - Shia">Muslim - Shia</option>
+	<option value="Muslim - Sunni">Muslim - Sunni</option>
+	<option value="Muslim - Others">Muslim - Others</option>
+	<option value="Christian">Christian</option>
+	<option value="Sikh">Sikh</option>
+	<option value="Jain - Digambar">Jain - Digambar</option>
+	<option value="Jain - Shwetambar">Jain - Shwetambar</option>
+	<option value="Jain - Others">Jain - Others</option>
+	<option value="Parsi">Parsi</option>
+	<option value="Buddhist">Buddhist</option>
+	<option value="Inter-Religion">Inter-Religion</option>
+   </select>
+	 </div>
+	 </div>
+	  <div class="clearfix clear_1">
+	    <div class="col-sm-4 register_right_inner_1 space_left">
+		<div class="center_4">
+		<p>Mother Tongue<p>
+		</div>
+	    </div>
+	    <div class="col-sm-8 register_right_inner_1 space_left">
+
+	    </div>
+	   </div>
+	  <div class="clearfix clear_1">
+	    <div class="col-sm-4 register_right_inner_1 space_left">
+          <div class="center_4">
+            <p>Email ID<p>
+          </div>
+	    </div>
+	    <div class="col-sm-8 register_right_inner_1 space_left">
+	    <input type="text" class="input-text" placeholder="">
+	  </div>
+	 </div>
+	  <div class="clearfix clear_1">
+	    <div class="col-sm-4 register_right_inner_1 space_left">
+          <div class="center_4">
+            <p>Password<p>
+          </div>
+	    </div>
+		<div class="col-sm-8 register_right_inner_1 space_left">
+	   <input type="text" class="input-text" placeholder="">
+	 </div>
+	 </div>
+	  <div class="clearfix col-sm-12 clear_2 space_all">
+	   <div class="col-sm-5 space_all">
+	    <div class="col-sm-12 space_all">
+		 <div class="col-sm-1 space_all">
+		  <div class="center_6">
+		   <h4><a href="#"><input type="checkbox"></a></h4>
+		  </div>
+
+		 </div>
+		 <div class="col-sm-11 space_all">
+		  <div class="center_5">
+		 <a href="#"><span class="well_5">I have read and agree to the T&C and Privacy Policy</span></a>
+		</div>
+		 </div>
+		</div>
+	   </div>
+	   <div class="col-sm-7 space_all">
+	    <p><a href="#">REGISTER FREE</a></p>
+	   </div>
+	 </div>
+    </div>
+   </div>
+  </div>
+   </div-->
+   <!--div class="col-sm-12 space_all">
+    <div class="center_9 clearfix">
+	 <div class="col-sm-4">
+	 <div class="col-sm-12">
+	  <div class="col-sm-2">
+	   <div class="center_7">
+	    <i class="fa fa-mobile"></i>
+	   </div>
+	  </div>
+	  <div class="col-sm-10">
+	   <div class="center_8">
+	    <p class="well_4 clearfix">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+	   </div>
+	  </div>
+	 </div>
+	</div>
+	<div class="col-sm-4">
+	 <div class="col-sm-12">
+	  <div class="col-sm-2">
+	   <div class="center_7">
+	    <i class="fa fa-rocket"></i>
+	   </div>
+	  </div>
+	  <div class="col-sm-10">
+	   <div class="center_8">
+	    <p class="well_4 clearfix">Lorem ipsum dolor sit amet consectetur Integer nec</p>
+	   </div>
+	  </div>
+	 </div>
+	</div>
+	<div class="col-sm-4">
+	 <div class="col-sm-12">
+	  <div class="col-sm-2">
+	   <div class="center_7">
+	    <i class="fa fa-user"></i>
+	   </div>
+	  </div>
+	  <div class="col-sm-10">
+	   <div class="center_8">
+	    <p class="well_6 clearfix">Lorem ipsum dolor sit amet consectetur adipiscing </p>
+	   </div>
+	  </div>
+	 </div>
+	 </div>
+	</div>
+   </div-->
+</section>
+
 {% endblock %}

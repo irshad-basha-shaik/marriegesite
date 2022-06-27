@@ -1,0 +1,1 @@
+name,contact,email,place_of_birth,sub_place,dob,timeofBirth,caste,sub_caste,gotra,manglik,rashi,nakshatra,height,religion,education,employee,income,college_name,org_name,fname,mname,foccupation,moccupation,brothers,sisters,mbrothers,msisters,address
