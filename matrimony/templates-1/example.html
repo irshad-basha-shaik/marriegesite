@@ -1,0 +1,182 @@
+{% extends 'index.html' %}
+
+{% block title %}List{% endblock %}
+
+{% block content %}
+
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+</style>
+</head>
+{% for form in list %}
+<body>
+
+
+<div class="card">
+
+  <img src="/w3images/team2.jpg" alt="John" style="width:100%">
+
+  <div style="margin: 24px 0;">
+    <label class="bio-label">Full Name</label>
+    <div class="col-sm-8 register_right_inner_1">
+      {{form.name}}
+    </div>
+  </div>
+  <div style="margin: 24px 0;">
+    <label class="bio-label">place_of_birth</label>
+    <div class="col-sm-8 register_right_inner_1">
+      {{form.place_of_birth}}
+    </div>
+  </div>
+  <div style="margin: 24px 0;">
+    <label class="bio-label">contact</label>
+    <div class="col-sm-8 register_right_inner_1">
+      {{form.contact}}
+    </div>
+  </div>
+  <div style="margin: 24px 0;">
+    <label class="bio-label">email</label>
+    <div class="col-sm-8 register_right_inner_1">
+      {{form.email}}
+    </div>
+  </div>
+
+
+</div>
+</body>
+{% endfor %}
+
+<!--style>
+    .table{float:left;}
+    .dataTables_scrollBody{height:40vh!important;}
+</style>
+<div class="content-wrapper"Excellent>
+    <div class="col-lg-12 stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">List</h4>
+                <div class="row">
+                    <div class="col-md-10 bg-light text-left">
+                    </div>
+                    <div class="col-md-2 bg-light text-right">
+                        <a type="button" class="btn btn-success" href="/assets_entry">New Entry</a>
+                    </div>
+                </div>
+                <div class="table-responsive pt-3">
+                    <table id="example" class="table table-bordered">
+                      <thead>
+                        <tr>
+                            <td>name</td>
+                            <td>contact</td>
+                            <td>email</td>
+                            <td>place_of_birth</td>
+                            <td>sub_place</td>
+                            <td>dob</td>
+                            <td>timeofBirth</td>
+                            <td>caste</td>
+                            <td>sub_caste</td>
+                            <td>gotra</td>
+                            <td>manglik</td>
+                            <td>rashi</td>
+                            <td>nakshatra</td>
+                            <td>height</td>
+                            <td>religion</td>
+                            <td>education</td>
+                            <td>employee</td>
+                            <td>income</td>
+                            <td>college_name</td>
+                            <td>org_name</td>
+                            <td>fname</td>
+                            <td>mname</td>
+                            <td>foccupation</td>
+                            <td>moccupation</td>
+                            <td>brothers</td>
+                            <td>sisters</td>
+                            <td>mbrothers</td>
+                            <td>msisters</td>
+                            <td>address</td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for form in list %}
+                        <tr>
+
+                            <td>{{form.name}}</td>
+                            <td>{{form.contact}}</td>
+                            <td>{{form.email}}</td>
+                            <td>{{form.place_of_birth}}</td>
+                            <td>{{form.sub_place}}</td>
+                            <td>{{form.dob}}</td>
+                            <td>{{form.timeofBirth}}</td>
+                            <td>{{form.caste}}</td>
+                            <td>{{form.sub_caste}}</td>
+                            <td>{{form.gotra}}</td>
+                            <td>{{form.manglik}}</td>
+                            <td>{{form.rashi}}</td>
+                            <td>{{form.nakshatra}}</td>
+                            <td>{{form.height}}</td>
+                            <td>{{form.religion}}</td>
+                            <td>{{form.education}}</td>
+                            <td>{{form.employee}}</td>
+                            <td>{{form.income}}</td>
+                            <td>{{form.college_name}}</td>
+                            <td>{{form.org_name}}</td>
+                            <td>{{form.fname}}</td>
+                            <td>{{form.mname}}</td>
+                            <td>{{form.foccupation}}</td>
+                            <td>{{form.moccupation}}</td>
+                            <td>{{form.brothers}}</td>
+                            <td>{{form.sisters}}</td>
+                            <td>{{form.mbrothers}}</td>
+                            <td>{{form.msisters}}</td>
+                            <td>{{form.address}}</td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+-->
+
+
+{% endblock %}
